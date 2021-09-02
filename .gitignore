@@ -1,0 +1,19 @@
+# ignore pyc files
+*.pyc
+
+# ignore __pycache__ dir
+__pycache__
+*/__pycache__
+
+# ignore .idea dir
+.idea
+
+# env packages
+env
+
+# local env conf
+env_vars/local.conf
+
+# static and media files
+static
+media
