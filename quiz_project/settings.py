@@ -51,8 +51,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3-rd Party
+    'rest_framework',
+    'nested_admin',
     # Local apps
     'users',
+    'quiz',
 ]
 
 MIDDLEWARE = [
