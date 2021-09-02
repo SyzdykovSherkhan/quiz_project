@@ -49,10 +49,12 @@ class UserQuizResult(models.Model):
 
 class UserAnswer(models.Model):
     user_quiz_result = models.ForeignKey(UserQuizResult,
-                                         on_delete=models.CASCADE)
+                                         on_delete=models.CASCADE,
+                                         related_name='user_answers')
     question = models.OneToOneField(Question, on_delete=models.SET_NULL,
                                     null=True)
     text = models.TextField(null=True, blank=True)
     answers_ids = ArrayField(
-        models.PositiveIntegerField(null=True, blank=True)
+        models.PositiveIntegerField(null=True, blank=True),
+        null=True, blank=True
     )

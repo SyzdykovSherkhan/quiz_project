@@ -30,7 +30,7 @@ class UserAnswerAdmin(nested_admin.NestedTabularInline):
     fields = ('question', 'text', 'answers_ids')
     extra = 0
 
-    def has_add_permission(self, request):
+    def has_add_permission(self, request, *args, **kwargs):
         return False
 
 
@@ -39,7 +39,7 @@ class UserQuizResultAdmin(nested_admin.NestedModelAdmin):
     list_display = ('id', 'user_id', 'quiz')
     readonly_fields = ('user_id', 'quiz', 'created', 'modified')
 
-    def has_add_permission(self, request):
+    def has_add_permission(self, request, *args, **kwargs):
         return False
 
 
