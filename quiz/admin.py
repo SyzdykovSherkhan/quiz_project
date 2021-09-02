@@ -22,7 +22,16 @@ class QuizAdmin(nested_admin.NestedModelAdmin):
     inlines = (QuestionInline, )
     list_display = ('id', 'start_date', 'end_date')
     readonly_fields = ('created', 'modified')
-    disabled_fields = ('start_date', )
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+
+        try:
+            if not request.user.is_superuser:
+                form.base_fields['start_date'].disabled = True
+        except KeyError:
+            ...
+        return form
 
 
 class UserAnswerAdmin(nested_admin.NestedTabularInline):
