@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'nested_admin',
+    'djoser',
     # Local apps
     'users',
     'quiz',
@@ -161,4 +162,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication'
     ]
+}
+
+DJOSER = {
+    'USER_CREATE_PASSWORD_RETYPE': True,
 }

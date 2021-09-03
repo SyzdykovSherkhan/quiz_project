@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('quiz.urls')),
     path('api/', include('users.urls')),
-    path('api/auth/', views.obtain_auth_token)
+    path('api/', include('djoser.urls')),
+    path('api/', include('djoser.urls.authtoken'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
         + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
