@@ -83,6 +83,11 @@ quiz app endpoints:
   
   3. Submit quiz answer:
     http://localhose:8000/api/answers/ with POST request
+    send in cookies field user_id numeric id if user is not authorized else user token
+    Example: In request headers add Cookie field like below:
+      Cookie: user_id=<numeric_user_id>
+    else if user has token:
+      Authorization: Token <user_toke>
     request data example:
     {
       "quiz": "<quiz_id>",
@@ -98,4 +103,5 @@ quiz app endpoints:
       ]
     }
   
+  4. Get user answers list
 
