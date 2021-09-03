@@ -104,4 +104,36 @@ quiz app endpoints:
     }
   
   4. Get user answers list
-
+    http://localhost:8000/answers/
+    return all users answers without filtering yet
+    response example:
+      [
+        {
+          "id": 1,
+          "quiz": 3
+        },
+        {
+          ...
+        }
+      ]
+  
+  5. Get detail user answer result:
+    http://localhost:8000/answers/<user_answer_id>/
+    response example:
+      {
+        "id": "<user_answer_id>",
+        "quiz": "<quiz_id>",
+        "user_answers": [
+          {
+            "question": <question_id>,
+            "text": "<user_answer_text>",
+            "answers_ids": [
+              <answer_id>,
+              <answer_id>
+            ]
+          },
+          {
+            ...
+          }
+        ]
+      }
