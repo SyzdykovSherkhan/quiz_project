@@ -82,4 +82,20 @@ quiz app endpoints:
       }
   
   3. Submit quiz answer:
+    http://localhose:8000/api/answers/ with POST request
+    request data example:
+    {
+      "quiz": "<quiz_id>",
+      "user_answers": [
+        {
+          "question": "<question_id>",
+          "answers_ids": "<answerd_ids>" # Example: [1, 2]
+        },
+        {
+          "question": "<question_id>",
+          "text": "<user answer text>" # If question required text answer
+        }
+      ]
+    }
+  
 
