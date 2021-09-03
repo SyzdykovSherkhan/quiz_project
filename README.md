@@ -61,7 +61,25 @@ quiz app endpoints:
         "end_date": "<quiz_end_date>",
         "questions": [
           {
-            "
+            "id": "<question_id>",
+            "text": "<question_text>",
+            "type": "<question_type>", # type field return integer value, posibile values is 0, 1, 2. 0 value means that required single answer for question, 2                                            # requered multiple answers for question, 3 required text as answer
+            "answers": [
+              {
+                "id": "<answer_id>",
+                "text": "<answer_text>"
+              },
+              {
+                "id": "<answer_id>",
+                "text": "<answer_text>"
+              }
+            ]
+          },
+          {
+            ...
+          }
+        ]
+      }
   
   3. Submit quiz answer:
 
