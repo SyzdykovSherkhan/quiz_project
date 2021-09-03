@@ -137,3 +137,5 @@ quiz app endpoints:
           }
         ]
       }
+ 
+Any backend developer in django can work in django admin, then I won't documentation for work in django admin
